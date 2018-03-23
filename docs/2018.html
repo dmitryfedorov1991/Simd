@@ -30,6 +30,30 @@
 
 <hr/>
 
+<h3 id="R064">April X, 2018 (version X.X.64.1XXX)</h3> 
+
+<h4>Algorithms</h4>
+<h5>New features</h5>
+<ul>
+ <li>Optional including of SimdVersion.h file in SimdLib.cpp.</li>
+ <li>Conversion of Simd::View to Tensorflow::Tensor.</li>
+ <li>Base implementation of function Gemm32fNN.</li>
+ <li>Function ResizeAreaGray</li>
+</ul>
+<h5>Bug fixing</h5>
+<ul>
+ <li>Error in base implementation, SSE2, AVX2 and AVX-512F optimizations of function Uint8ToFloat32.</li>
+ <li>Error in SSE2 optimization of function ReduceGray2x2.</li>
+</ul>
+
+<h4>Test framework</h4>
+<h5>New features</h5>
+<ul>
+ <li>Tests for verifying functionality of function Gemm32fNN.</li>
+</ul>
+
+<a href="#HOME">Home</a> 
+<hr/>
 <h3 id="R063">March 1, 2018 (version 4.1.63.1372)</h3> 
 
 <h4>Algorithms</h4>
@@ -52,7 +76,6 @@
 <ul>
  <li>Visual Studio 2012 compiler errors.</li>
  <li>Clang compiler warning in file TestCheckC.c.</li>
-</ul>
 </ul>
 
 <h4>Test framework</h4>

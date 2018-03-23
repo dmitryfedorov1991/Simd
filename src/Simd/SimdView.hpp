@@ -1,7 +1,8 @@
 /*
 * Simd Library (http://ermig1979.github.io/Simd).
 *
-* Copyright (c) 2011-2018 Yermalayeu Ihar.
+* Copyright (c) 2011-2018 Yermalayeu Ihar,
+*               2018-2018 Dmitry Fedorov.
 *
 * Permission is hereby granted, free of charge, to any person obtaining a copy
 * of this software and associated documentation files (the "Software"), to deal
@@ -211,7 +212,7 @@ namespace Simd
 
             \return an Tensorflow Tensor which references to this image.
         */
-        void ToTFTensor( tensorflow::Tensor & tensor, float shift=0, float scale=1) const;
+        void ToTFTensor(tensorflow::Tensor & tensor, float shift = 0, float scale = 1) const;
 
 
         /*!
@@ -221,7 +222,7 @@ namespace Simd
 
            \return an Tensorflow Tensor which references to this image.
        */
-        void ToTFTensor( tensorflow::Tensor & tensor, int batchIndex, float shift=0, float scale=0) const;
+        void ToTFTensor(tensorflow::Tensor & tensor, int batchIndex, float shift = 0, float scale = 0) const;
 #endif
 
         /*!
@@ -648,9 +649,8 @@ namespace Simd
     }
 #endif
 
-
 #ifdef SIMD_TENSORFLOW_ENABLE
-template <template<class> class A> SIMD_INLINE void View<A>::ToTFTensor( tensorflow::Tensor & tensor, float shift, float scale) const
+    template <template<class> class A> SIMD_INLINE void View<A>::ToTFTensor( tensorflow::Tensor & tensor, float shift, float scale) const
     {
         auto mapped = tensor.tensor<float, 3>();
 
@@ -691,7 +691,6 @@ template <template<class> class A> SIMD_INLINE void View<A>::ToTFTensor( tensorf
             }
         }
     }
-
 
     template <template<class> class A> SIMD_INLINE void View<A>::ToTFTensor( tensorflow::Tensor & tensor, int batchIndex, float shift, float scale) const
     {
